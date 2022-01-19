@@ -3,10 +3,12 @@ import { TemplateProps } from "@govtechsg/decentralized-renderer-react-component
 import { css } from "@emotion/core";
 import { CustomTemplateCertificate } from "../samples/customTemplateSample";
 import './custom.css'
+import QRCode from "qrcode.react";
 
 export const CocTemplate: FunctionComponent<
   TemplateProps<CustomTemplateCertificate> & { className?: string }
 > = ({ document, className = "" }) => {
+    // ReactPDF.renderToStream(<MyDocument />, `${'../coc'}/example.pdf`)
   return (
     <>
         <div className="container" id="custom-template">
@@ -87,7 +89,7 @@ export const CocTemplate: FunctionComponent<
                     <img className="img-300 float-left" src={require('../../assets/clinic_stamp.png')} />
                 </div>
                 <div className="w-50">
-                    <img className="img-100 float-right" src={require('../../assets/qr-code-1.png')} />
+                    <QRCode style={{float: 'right'}} value="http://facebook.github.io/react/" />
                 </div>
             </div>
             <fieldset className="mt-4">
@@ -102,7 +104,7 @@ export const CocTemplate: FunctionComponent<
                     </div>
                     <div className="flex items-center mt-1">
                         <div className="w-20">
-                            <img className="img-130" src={require('../../assets/qr-code-2.png')} />
+                            <QRCode value="http://facebook.github.io/react/" />
                         </div>
                         <div className="w-80 pl-5">
                             <p className="line-height-1" >
@@ -155,7 +157,7 @@ export const CocTemplate: FunctionComponent<
                     </div>
                     <div className="flex items-center mt-1">
                         <div className="w-20">
-                            <img className="img-130 float-right ml-2" src={require('../../assets/qr-code-3.png')} />
+                            <QRCode value="http://facebook.github.io/react/" />
                         </div>
                         <div className="w-80 pl-5">
                             <p className="line-height-1">
