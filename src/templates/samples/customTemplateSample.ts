@@ -35,7 +35,7 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
   $template: {
     name: "HEALTH_CERT",
     type: v2.TemplateType.EmbeddedRenderer,
-    url: "https://healthcert.renderer.moh.gov.sg/"
+    url: "http://localhost:3000"
   },
   foo: {
     title: "Bar is awesome"
