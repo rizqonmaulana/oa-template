@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { css } from "@emotion/core";
 import { CustomTemplateCertificate } from "../samples/customTemplateSample";
-import './custom.css'
+// import './custom.css'
 import QRCode from "qrcode.react";
 
 export const CocTemplate: FunctionComponent<

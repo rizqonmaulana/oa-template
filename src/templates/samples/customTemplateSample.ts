@@ -2,9 +2,6 @@ import { v2 } from "@govtechsg/open-attestation";
 
 export interface CustomTemplateCertificate extends v2.OpenAttestationDocument {
   name: string;
-  foo?: {
-    title: string;
-  };
   recipient: {
     name: string;
   };
@@ -19,7 +16,6 @@ export interface CustomTemplateCertificate extends v2.OpenAttestationDocument {
       clinicName: string;
     }
   ]
-  $template: v2.TemplateObject;
 }
 
 export const customTemplateCertificate: CustomTemplateCertificate = {
@@ -28,11 +24,11 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
     {
       id: "did:ethr:0x19AB6C25A8A0D66f1582D2c03Ee8d6f3cbF63dbD",
       revocation: {
-          type: "NONE"
+          type: v2.RevocationType.None
         },
       name: "JEB-HEALTH",
       identityProof: {
-          type: "DNS-DID",
+          type: v2.IdentityProofType.DNSDid,
           location: "dev-healthcerts.jebhealth.com",
           key: "did:ethr:0x19AB6C25A8A0D66f1582D2c03Ee8d6f3cbF63dbD#controller"
         }
@@ -45,9 +41,6 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
     name: "HEALTH_CERT",
     type: v2.TemplateType.EmbeddedRenderer,
     url: "http://localhost:3000"
-  },
-  foo: {
-    title: "Bar is awesome"
   },
   data: [
     {
