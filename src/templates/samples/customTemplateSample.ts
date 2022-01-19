@@ -26,9 +26,18 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
   name: "MEMO ON COVID-19 REAL TIME RT-PCR SWAB TEST RESULT",
   issuers: [
     {
-      name: "institute of blockchain"
+      id: "did:ethr:0x19AB6C25A8A0D66f1582D2c03Ee8d6f3cbF63dbD",
+      revocation: {
+          type: "NONE"
+        },
+      name: "JEB-HEALTH",
+      identityProof: {
+          type: "DNS-DID",
+          location: "dev-healthcerts.jebhealth.com",
+          key: "did:ethr:0x19AB6C25A8A0D66f1582D2c03Ee8d6f3cbF63dbD#controller"
+        }
     }
-  ], 
+], 
   recipient: {
     name: "John Doe"
   },
