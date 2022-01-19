@@ -23,6 +23,7 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
   issuers: [
     {
       name: "JEB-HEALTH",
+      documentStore: "0x19AB6C25A8A0D66f1582D2c03Ee8d6f3cbF63dbD",
       identityProof: {
           type: v2.IdentityProofType.DNSDid,
           location: "dev-healthcerts.jebhealth.com",
