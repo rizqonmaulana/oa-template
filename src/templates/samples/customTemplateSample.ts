@@ -40,7 +40,7 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
   $template: {
     name: "HEALTH_CERT",
     type: v2.TemplateType.EmbeddedRenderer,
-    url: "http://localhost:3000"
+    url: "https://61e7976b8ae99400073e8a06--amazing-joliot-c5e5f4.netlify.app/"
   },
   data: [
     {
